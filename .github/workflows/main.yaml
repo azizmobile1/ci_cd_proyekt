@@ -13,20 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Kodni yuklash
       - name: Kodni yuklash
         uses: actions/checkout@v3
 
-      # 2. Flutter SDK o'rnatish
       - name: Flutter o'rnatish
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.0'
+          flutter-version: '3.35.3'
 
-      # 3. Paketlarni o'rnatish
       - name: Flutter pub get
         run: flutter pub get
 
-      # 4. Testlarni ishga tushirish
       - name: Flutter testlarni ishga tushirish
         run: flutter test
